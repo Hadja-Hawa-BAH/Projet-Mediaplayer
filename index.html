@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Musique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="controls" id="column">
+                <!-- Boutons de lecture de l'audio -->
+                <div class="justify" id="margin">
+                    <button class="player" type="button" id="btnPrevious">&#8592;</button>
+                    <button class="player" type="button" id="btnPlay-pause">&#9658;</button>
+                    <button class="player" type="button" id="btnNext">&#8594;</button>
+                </div>
+
+                <!-- Boutons volume -->
+                <div class="justify" id="range">
+                    <button class="volume" type="button" id="decreaseVolume">&#128265;</button>
+                    <input class="volume" type="range" id="progression" min="0" max="100" value="50">
+                    <button class="volume" type="button" id="increaseVolume">&#128266;</button>
+
+                </div>
+
+            </div>
+
+            <!-- Nom et titre de la chanson en cours-->
+            <div class="name-song">
+                <p class="title" id="artist-name">Nom artiste</p>
+                <figcaption class="title" id="song-title"> Titre de la chanson </figcaption>
+                <input class="title" id="progressBar" type="range" min="0" max="100" value="50">
+            </div>
+
+            <!-- Barre de recherche -->
+            <div class="search">
+                <img id="search-img" alt="player" src="search.jpg">
+                <input id="searchBar" type="search" placeholder="recherche">
+            </div>
+        </div>
+
+        <main class="content">
+            <!-- Table de fonctionnalités -->
+            <nav class="sidebar">
+                <table>
+                    <tr>
+                        <td> Music</td>
+                    </tr>
+                    <tr>
+                        <td>Videos</td>
+                    </tr>
+                    <tr>
+                        <td>Podcasts</td>
+                    </tr>
+                </table>
+            </nav>
+            <div class="grid" id="song-grid">
+
+                <!-- <!-- Cartes d'images correspondant aux chansons - -->
+
+
+                <!-- <figure class="card">
+                    <img class="album" src="1.jpg" alt="">
+                    <figcaption class="title">Silent Patner</figcaption>
+                    <figcaption class="song">Blue_Skies</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album" src="2.jpg" alt="">
+                    <figcaption class="title">Media Right Productions</figcaption>
+                    <figcaption class="song">Cartoon Hoedown</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album"  src="3.jpg" alt="">
+                    <figcaption class="title">Jingle Punks</figcaption>
+                    <figcaption class="song">Earthy Crust</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album"  src="4.jpg" alt="">
+                    <figcaption class="title">Silent Partner</figcaption>
+                    <figcaption class="song">Hold On a Minute</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album" src="5.jpg" alt="">
+                    <figcaption class="title">City of Prague Philharmonic</figcaption>
+                    <figcaption class="song">John Dunbar Theme</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album" src="6.jpg" alt="">
+                    <figcaption class="title">Silent Partner</figcaption>
+                    <figcaption class="song">Stay with You</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album" src="7.jpg" alt="">
+                    <figcaption class="title">Beethoven</figcaption>
+                    <figcaption class="song">Symphony No. 5 (by Beethoven)</figcaption>
+                </figure>
+
+                <figure class="card">
+                    <img class="album" src="1.jpg" alt="">
+                    <figcaption class="title">Nom artiste</figcaption>
+                    <figcaption class="song">Titre</figcaption>
+                </figure>
+ -->
+            </div>
+        </main>
+        <footer>
+            <audio hidden id="mediaplayer" controls> </audio>
+        </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
