@@ -75,7 +75,7 @@ function trackSongCard(songs) {
         let card = document.createElement("figure");
         card.className = "card";
         card.innerHTML = `
-            <img src="${track.image}" alt="${track.title}">
+            <img src="docs/${track.image}" alt="${track.title}">
             <figcaption>${track.author}</figcaption>
             <figcaption class="title">${track.title}</figcaption>
             `;
