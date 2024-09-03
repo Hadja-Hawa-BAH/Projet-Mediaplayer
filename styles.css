@@ -1,3 +1,4 @@
+/* Large devices (laptops/desktops, 992px and up) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,26 +7,32 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
+    display: flex;
+    flex-direction: column;
+    /* height: 100; */
+
+
+
+
+    /* display: grid; */
+    /* grid-template-areas:
         "header header"
-        "sidebar content";
-    grid-template-columns: 200px 1fr;
+        "content content"; */
+    /* grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr;
     height: 100vh;
-    padding: 10px;
+    padding: 10px; */
 
 }
 
 .header {
-    grid-area: header;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     height: 50px;
-
 }
 
 .controls {
@@ -60,7 +67,6 @@ body {
     margin-bottom: 15px;
 }
 
-
 .search {
     display: flex;
     flex-direction: row;
@@ -68,7 +74,6 @@ body {
     margin-bottom: 10px;
     width: 200px;
     padding: 50px;
-
 }
 
 #search-img {
@@ -99,7 +104,6 @@ main {
     display: flex;
     justify-content: flex-start;
     padding: 10px;
-
 }
 
 .sidebar td {
@@ -122,9 +126,9 @@ main {
 }
 
 .content {
-    grid-area: content;
+    display: flex;
     padding: 10px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     background-color: #fff;
 }
 
@@ -134,9 +138,6 @@ main {
     gap: 20px;
     width: 80%;
     margin: 10px 15px;
-  
-    
-
 }
 
 .card {
@@ -181,176 +182,82 @@ main {
 
 /* Le Responsive sera fait sur une autre page */
 
- /* Large devices (laptops/desktops, 992px and up) */
- /* @media only screen and (min-width: 992px) { 
-   
-    .header {
-        flex-direction: row;
-        align-items: flex-start;
-      
-    }
-
-    .controls {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .search {
-        width: 100%;
-        margin-top: 15px; 
-    }
-
-    .title {
-        font-weight: bold;
-    }
-    
-    #search-img {
-        width: 80px;
-        height: 30px;
-    }
-
-    .controls button {
-        margin-bottom: 5px;
-
-    }
-
-    .controls input[type="range"] {
-        width: 100%;
-    }
-
-    .search figcaption p {
-        width: 90%;
-    }
-
-    .search input[type="search"] {
-        width: 100%;
-        margin-bottom: 10px;
-
-    }
-
-    .sidebar {
-        display: none;
-    } 
- }   */
-
 /* Medium devices (landscape tablets, 768px and up) */
-/*
-@media only screen and (min-width: 768px)  {
-    .grid {
-        grid-template-columns: repeat(3,  1fr);
-        }
-        
-    .header {
-        flex-direction: column;
-        justify-content: space-between; 
-        align-items: stretch;
-        height: 100px;
-      
-    } 
-
-    .controls {
-        flex-direction: row;
-        align-items: flex-start;
-    } 
-
-    .name-song {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search {
-        width: 90%;
-        margin-top: 15px; 
-    }
-
-    .title {
-        font-weight: bold;
-    }  */
-
-    
 /* 
-    #search-img {
-        width: 80px;
-        height: 30px;
+@media only screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .controls button {
-        margin-bottom: 5px;
-
+    .card {
+        height: 300px;
     }
 
-    .controls input[type="range"] {
-        width: 100%;
-    }
 
-    .search figcaption p {
-        width: 90%;
-    }
-
-    .search input[type="search"] {
-        width: 90%;
-        margin-bottom: 10px;
-
-    }
-
-    .sidebar {
-        display: none;
-    } */
-
-/* }   */
+}  */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {
     .grid {
-        grid-template-columns: repeat(2,  1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        width: 100%;
     }
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-      
+    .content {
+        display: flex;
+        width: 350px;
+    }
+
+    .small {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .form {
+        display: flex;
     }
 
     .controls {
+        display: flex;
+        align-items: center;
+    }
+
+    #column {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+    }
+
+    .justify {
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .small {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .form {
+        display: flex;
+    }
+
+    #progressBar {
+        width: 75%;
     }
 
     .search {
-        width: 80%; */
-/* margin-top: 15px; 
-    }
-
-    .title {
-        font-weight: bold;
-    }
-
-    #search-img {
-        width: 70px;
+        display: flex;
         height: 30px;
+        padding: 10px;
     }
 
-    .controls button {
-        margin-bottom: 5px;
-
-    }
-
-    .controls input[type="range"] { */
-/* width: 90%;
-    }
-
-    .search figcaption p {
-        width: 90%;
-    }
-
-    .search input[type="search"] {
-        width: 90%;
-        margin-bottom: 10px;
-
-    }
-
-    .sidebar {
-        display: none;
+    #searchBar {
+        height: 10px;
     }
 
 } */
@@ -358,63 +265,28 @@ main {
 
 /* Extra small resolution */
 /* @media only screen and (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(2,  1fr);
-        }
-    
-    .controls button {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
+ .grid {
+        grid-template-columns: repeat(3, 1fr);
+    } 
 
-    #margin button {
+    .small {
+        display: flex;
         flex-direction: row;
-    } */
-
-        /* 
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 5px;
+        justify-content: space-around;
     }
 
     .search {
-        width: 100%;
-        margin-top: 10px; 
-    }
-
-    .title {
-        font-weight: bold;
-    }
-
-    #search-img {
-        width: 50px; */
-/* height: 30px;
-    }
-
-    .controls button {
-        margin-bottom: 5px;
-
-    }
-
-    .controls input[type="range"] {
-        width: 80%;
-    }
-
-    .search figcaption p {
-        width: 90%;
-    }
-
-    .search input[type="search"] {
-        width: 90%;
-        margin-bottom: 10px;
-
-    }
-
-    .sidebar {
-        display: none;
+        display: flex;
+        justify-content: baseline;
     } */
+
+/* #searchBar {
+        width: 380px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+
+    } */
+
 
 /* }  */

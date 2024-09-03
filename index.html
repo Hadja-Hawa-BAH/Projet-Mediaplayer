@@ -22,7 +22,8 @@
                 <!-- Boutons volume -->
                 <div class="justify" id="range">
                     <button class="volume" type="button" id="decreaseVolume">&#128265;</button>
-                    <input class="volume" type="range" id="progression" min="0" max="100" value="50">
+                    <input aria-label="Bar contrôle du volume" class="volume" type="range" id="progression" min="0"
+                        max="100" value="50">
                     <button class="volume" type="button" id="increaseVolume">&#128266;</button>
 
                 </div>
@@ -33,13 +34,14 @@
             <div class="name-song">
                 <p class="title" id="artist-name">Nom artiste</p>
                 <figcaption class="title" id="song-title"> Titre de la chanson </figcaption>
-                <input class="title" id="progressBar" type="range" min="0" max="100" value="50">
+                <input aria-label="Bar de progression de la musique" class="title" id="progressBar" type="range" min="0"
+                    max="100" value="50">
             </div>
 
             <!-- Barre de recherche -->
             <div class="search">
                 <img id="search-img" alt="player" src="docs/search.jpg">
-                <input id="searchBar" type="search" placeholder="recherche">
+                <input aria-label="Bar de recherche" id="searchBar" type="search" placeholder="recherche">
             </div>
         </div>
 
@@ -58,12 +60,17 @@
                     </tr>
                 </table>
             </nav>
+            
             <div class="grid" id="song-grid">
 
-                <!-- <!-- Cartes d'images correspondant aux chansons - -->
+            </div>
+
+        </main>
+
+        <!-- <!-- Cartes d'images correspondant aux chansons - -->
 
 
-                <!-- <figure class="card">
+        <!-- <figure class="card">
                     <img class="album" src="1.jpg" alt="">
                     <figcaption class="title">Silent Patner</figcaption>
                     <figcaption class="song">Blue_Skies</figcaption>
@@ -111,8 +118,6 @@
                     <figcaption class="song">Titre</figcaption>
                 </figure>
  -->
-            </div>
-        </main>
         <footer>
             <audio hidden id="mediaplayer" controls> </audio>
         </footer>
